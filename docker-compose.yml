@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+
+  incidentiq:
+
+    build: .
+
+    ports:
+      - "8000:8000"
+
+    volumes:
+      - ./chroma_db:/app/chroma_db

@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: incident-app
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: incident-app
+
+  template:
+    metadata:
+      labels:
+        app: incident-app
+
+    spec:
+      containers:
+      - name: app
+        image: incident-app:latest
+
+        ports:
+        - containerPort: 8000
+
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8000

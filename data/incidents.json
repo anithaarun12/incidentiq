@@ -1,0 +1,94 @@
+[
+
+    {
+    "id":"INC-001",
+    "title":"Database Pool Exhausted",
+    "description":"Too many active PostgreSQL connections caused application timeouts",
+    "severity":"P1",
+    "category":"database",
+    "resolution":"Increase pool size and restart application"
+    },
+    
+    {
+    "id":"INC-002",
+    "title":"OOMKilled Pod",
+    "description":"Kubernetes pod exceeded memory limits",
+    "severity":"P2",
+    "category":"infra",
+    "resolution":"Increase memory limits"
+    },
+    
+    {
+    "id":"INC-003",
+    "title":"Disk Full",
+    "description":"Server disk reached 100 percent utilization",
+    "severity":"P2",
+    "category":"infra",
+    "resolution":"Cleanup logs and extend storage"
+    },
+    
+    {
+    "id":"INC-004",
+    "title":"Redis High CPU",
+    "description":"Redis CPU utilization exceeded 95 percent",
+    "severity":"P2",
+    "category":"application",
+    "resolution":"Optimize commands and scale Redis"
+    },
+    
+    {
+    "id":"INC-005",
+    "title":"DNS Resolution Failure",
+    "description":"Services unable to resolve internal hostnames",
+    "severity":"P1",
+    "category":"network",
+    "resolution":"Restart DNS service"
+    },
+    
+    {
+    "id":"INC-006",
+    "title":"Certificate Expired",
+    "description":"TLS certificate expired causing HTTPS failures",
+    "severity":"P1",
+    "category":"network",
+    "resolution":"Renew certificate and restart web server"
+    },
+    
+    {
+    "id":"INC-007",
+    "title":"Slow SQL Queries",
+    "description":"Database queries taking more than 30 seconds",
+    "severity":"P3",
+    "category":"database",
+    "resolution":"Add indexes and optimize queries"
+    },
+    
+    {
+    "id":"INC-008",
+    "title":"Failed Deployment",
+    "description":"New deployment introduced application errors",
+    "severity":"P2",
+    "category":"application",
+    "resolution":"Rollback deployment"
+    },
+    
+    {
+    "id":"INC-009",
+    "title":"Network Partition",
+    "description":"Cluster nodes unable to communicate",
+    "severity":"P1",
+    "category":"network",
+    "resolution":"Restore network connectivity"
+    },
+    
+    {
+    "id":"INC-010",
+    "title":"API Rate Limit Exceeded",
+    "description":"External API returned HTTP 429",
+    "severity":"P3",
+    "category":"application",
+    "resolution":"Enable caching and throttling"
+    }
+    
+    ]
+    
